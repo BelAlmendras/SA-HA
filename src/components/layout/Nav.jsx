@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, ShoppingCart, Search, User } from "lucide-react";
 import { Button } from "./../ui/button";
 
@@ -17,20 +18,21 @@ const Nav = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <a href="/" className="text-2xl font-bold text-foreground">
-            <img src="/hoseki.png" alt="hoseki" class="w-36 h-36 object-contain" />
-          </a>
+          {/* Logo */}
+          <Link to="/" className="text-2xl font-bold text-foreground">
+            <img src="/hoseki.png" alt="hoseki" className="w-36 h-36 object-contain" />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="google-font-text text-sm !font-medium text-foreground transition-colors hover:text-accent"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -73,14 +75,14 @@ const Nav = () => {
           <div className="border-t border-border py-4 md:hidden animate-fade-in">
             <div className="space-y-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className="block text-sm font-medium text-foreground transition-colors hover:text-accent"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <div className="flex gap-4 pt-4">
                 <Button variant="outline" size="sm" className="flex-1">
