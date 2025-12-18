@@ -3,10 +3,6 @@
   Aplicación web desarrollada con <strong>React + Vite</strong> para una experiencia moderna e intuitiva 💍
 </p>
 
-<p align="center">
-  <a href="https://hoseki.vercel.app" target="_blank">🌐 Ver demo en vivo</a>
-</p>
-
 ---
 
 ## 📝 Descripción general
