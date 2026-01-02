@@ -41,9 +41,15 @@ const Nav = () => {
             <Button variant="ghost" size="icon" aria-label="Buscar">
               <Search className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" aria-label="Usuario">
-              <User className="h-5 w-5" />
-            </Button>
+
+
+            <Link to="/login">
+              <Button variant="ghost" size="icon" aria-label="Usuario">
+                <User className="h-5 w-5" />
+              </Button>
+            </Link>
+
+
             <Button
               variant="default"
               size="icon"
